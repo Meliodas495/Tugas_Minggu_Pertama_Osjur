@@ -1,0 +1,22 @@
+import random
+
+def puzzle_tebak_angka():
+    angka_rahasia = random.randint(1, 100)
+    tebakan = None
+    percobaan = 0
+    print("Selamat datang di permainan tebak angka!")
+    print("Saya telah memilih sebuah angka antara 1 hingga 100.")
+    
+    while tebakan != angka_rahasia:
+        tebakan = int(input("Coba tebak angka saya: "))
+        percobaan += 1
+        
+        if tebakan < angka_rahasia:
+            print("Tebakanmu terlalu rendah!")
+        elif tebakan > angka_rahasia:
+            print("Tebakanmu terlalu tinggi!")
+        else:
+            print(f"Selamat! Kamu berhasil menebak angka {angka_rahasia} dalam {percobaan} percobaan.")
+            
+# Jalankan fungsi untuk memulai puzzle
+puzzle_tebak_angka()
